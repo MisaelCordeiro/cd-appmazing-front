@@ -14,18 +14,21 @@
                 <mat-label>Precio</mat-label>
                 <input matInput type="number" name="price" [(ngModel)]="product.price">
             </mat-form-field>
-            <mat-form-field appearance="outline">
-                <mat-label>Activo</mat-label>
-                <input matInput type="boolean" name="active" [(ngModel)]="product.active">
-            </mat-form-field>
+            
             <mat-form-field appearance="outline">
                 <mat-label>Fecha de entrada</mat-label>
                 <input matInput type="date" name="date_added" [(ngModel)]="product.date_added">
             </mat-form-field>
-            <mat-form-field appearance="outline">
+            <mat-form-field>
                 <mat-label>Categoria</mat-label>
-                <input matInput type="category" name="category" [(ngModel)]="category.id">
+                <mat-select name="category" [(ngModel)]="category">
+                    <mat-option *ngFor="let category of categories" [value]="category">{{category.name}}</mat-option>
+                </mat-select>
             </mat-form-field>
+            <mat-radio-group name="active" [(ngModel)]="product.active">
+                <mat-radio-button value="true">Activo</mat-radio-button>
+                <mat-radio-button value="false">No activo</mat-radio-button>
+              </mat-radio-group>
             <div class="button">
                 <button mat-raised-button color="primary" type="submit">
                     <mat-icon>save</mat-icon>

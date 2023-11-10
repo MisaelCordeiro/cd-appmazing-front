@@ -3,6 +3,7 @@ import { Product } from '../model/Product';
 import { Category } from '../model/Category';
 import { Router } from '@angular/router';
 import { ProductsService } from '../products.service';
+import { CategoriesService } from '../categories.service';
 
 @Component({
   selector: 'app-product-new',
@@ -11,11 +12,20 @@ import { ProductsService } from '../products.service';
 })
 export class ProductNewComponent implements OnInit {
   product: Product = new Product();
-  category: Category = new Category();
+  category: Category = new Category;
 
-  constructor(private router: Router, private productsService: ProductsService) { }
+  categories: any = [];
+
+  constructor(private router: Router, private productsService: ProductsService, private categoriesService: CategoriesService) { }
 
   ngOnInit() {
+    this.loadCategories();
+  }
+
+  loadCategories(){
+    this.categoriesService.getCategories().subscribe(data => {
+      this.categories = data;
+    })
   }
 
   newProduct(){
@@ -25,7 +35,7 @@ export class ProductNewComponent implements OnInit {
       price: this.product.price,
       active: this.product.active,
       date_added: this.product.date_added,
-      category: this.category
+      category : this.category
     }
     this.productsService.newProduct(product);
     this.navigateToHome();
@@ -38,6 +48,8 @@ export class ProductNewComponent implements OnInit {
   navigateToHome(){
     this.router.navigate(['/products']);
   }
+
+
 
 
 
