@@ -16,5 +16,13 @@
         <p>
             <mat-icon>email</mat-icon><strong>Email: </strong> {{contact.email}}
         </p>
+        <mat-card-actions align="end">
+            <button mat-raised-button type="button" (click)="editContact()">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-raised-button type="button" (click)="closeContact()">
+                <mat-icon>cancel</mat-icon>
+            </button>
+        </mat-card-actions>
     </mat-card-content>
 </mat-card>

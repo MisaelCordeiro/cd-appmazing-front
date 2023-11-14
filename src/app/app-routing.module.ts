@@ -7,16 +7,21 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ContactNewComponent } from './contact-new/contact-new.component';
 import { ProductNewComponent } from './product-new/product-new.component';
 import { CategoriesHomeComponent } from './categories-home/categories-home.component';
+import { CategoryNewComponent } from './category-new/category-new.component';
+import { ContactUpdateComponent } from './contact-update/contact-update.component';
 
 
 const routes: Routes = [
   {path: 'contacts', component: ContactHomeComponent},
   {path: 'contact/new', component: ContactNewComponent},
   {path: 'contact/:id', component: ContactDetailComponent},
+  {path: 'contact/update/:id', component: ContactUpdateComponent},
   {path: 'products', component: ProductHomeComponent},
   {path: 'product/new', component: ProductNewComponent},
   {path: 'product/:id', component: ProductDetailComponent},
   {path: 'categories', component: CategoriesHomeComponent},
+  {path: 'category/new', component: CategoryNewComponent},
+  
 ];
 
 @NgModule({

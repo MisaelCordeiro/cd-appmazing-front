@@ -16,5 +16,12 @@ export class CategoriesService {
     return this.http.get<any>(url, {headers});
   }
 
+  newCategory(category: any): void{
+    const url = "http://localhost:30030/categories/add"
+    const headers = new HttpHeaders().set('Content-Type','application/json');
+    const body = category;
+    this.http.post(url, body, {headers}).subscribe();
+  }
+
   
 }

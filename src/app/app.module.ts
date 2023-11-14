@@ -14,6 +14,9 @@ import { FormsModule } from '@angular/forms';
 import { ContactNewComponent } from './contact-new/contact-new.component';
 import { ProductNewComponent } from './product-new/product-new.component';
 import { CategoriesHomeComponent } from './categories-home/categories-home.component';
+import { CategoryNewComponent } from './category-new/category-new.component';
+import { ContactUpdateComponent } from './contact-update/contact-update.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { CategoriesHomeComponent } from './categories-home/categories-home.compo
     ProductDetailComponent,
     ContactNewComponent,
     ProductNewComponent,
-    CategoriesHomeComponent
+    CategoriesHomeComponent,
+    CategoryNewComponent,
+    ContactUpdateComponent,
+    
   ],
   imports: [
     BrowserModule,
