@@ -14,11 +14,19 @@
             <mat-icon>favorite</mat-icon><strong>Activo: </strong> {{product.active}}
         </p>
         <p>
-            <mat-icon>watch_later</mat-icon><strong>Fecha en la que se añade: </strong> {{product.date_added}}
+            <mat-icon>watch_later</mat-icon><strong>Fecha en la que se añade: </strong> {{product.date_added | date:'yyyy/MM/dd'}}
         </p>
         <p>
             <mat-icon>email</mat-icon><strong>Categoria: </strong> {{product.category.name}}
 
         </p>
+        <mat-card-actions align="end">
+            <button mat-raised-button type="button" (click)="editProduct()">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-raised-button type="button" (click)="closeProduct()">
+                <mat-icon>cancel</mat-icon>
+            </button>
+        </mat-card-actions>
     </mat-card-content>
 </mat-card>

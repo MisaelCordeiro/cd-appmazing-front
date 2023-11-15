@@ -9,6 +9,7 @@ import { ProductNewComponent } from './product-new/product-new.component';
 import { CategoriesHomeComponent } from './categories-home/categories-home.component';
 import { CategoryNewComponent } from './category-new/category-new.component';
 import { ContactUpdateComponent } from './contact-update/contact-update.component';
+import { ProductUpdateComponent } from './product-update/product-update.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'products', component: ProductHomeComponent},
   {path: 'product/new', component: ProductNewComponent},
   {path: 'product/:id', component: ProductDetailComponent},
+  {path: 'product/update/:id', component: ProductUpdateComponent},
   {path: 'categories', component: CategoriesHomeComponent},
   {path: 'category/new', component: CategoryNewComponent},
   

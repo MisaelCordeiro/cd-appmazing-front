@@ -16,6 +16,8 @@ import { ProductNewComponent } from './product-new/product-new.component';
 import { CategoriesHomeComponent } from './categories-home/categories-home.component';
 import { CategoryNewComponent } from './category-new/category-new.component';
 import { ContactUpdateComponent } from './contact-update/contact-update.component';
+import { ProductUpdateComponent } from './product-update/product-update.component';
+
 
 
 @NgModule({
@@ -30,6 +32,7 @@ import { ContactUpdateComponent } from './contact-update/contact-update.componen
     CategoriesHomeComponent,
     CategoryNewComponent,
     ContactUpdateComponent,
+    ProductUpdateComponent,
     
   ],
   imports: [
@@ -46,7 +49,8 @@ import { ContactUpdateComponent } from './contact-update/contact-update.componen
     MatInputModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatRadioModule
+    MatRadioModule,
+    
     
     
   ],
