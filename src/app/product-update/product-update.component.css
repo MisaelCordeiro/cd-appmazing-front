@@ -1,16 +1,39 @@
-.card{
-    margin: 20px 40px 0px 40px;
+/* Añade algún estilo a la tarjeta (mat-card) */
+.card {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px; /* Ajusta el ancho máximo según tus preferencias */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-form{
+/* Estilo para el formulario */
+form {
     display: flex;
     flex-direction: column;
+    padding: 20px; /* Agrega un espacio interno para mejorar la apariencia */
 }
 
-.button{
+/* Estilo para los campos de entrada */
+mat-form-field {
+    margin-bottom: 16px; /* Espaciado entre campos */
+    width: 100%;
+}
+
+/* Estilo para los botones */
+.button {
     display: flex;
     justify-content: flex-end;
+    margin-top: 20px; /* Añade un espacio sobre los botones */
 }
-.button button{
-    margin-left: 1%;
+
+.button button {
+    margin-left: 8px; /* Espaciado entre botones */
+}
+
+mat-radio-group {
+    margin-bottom: 16px; /* Espaciado entre el grupo de radio buttons y el siguiente elemento */
+}
+
+mat-radio-button {
+    margin-right: 8px; /* Espaciado entre los radio buttons individuales */
 }

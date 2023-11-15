@@ -17,6 +17,7 @@ import { CategoriesHomeComponent } from './categories-home/categories-home.compo
 import { CategoryNewComponent } from './category-new/category-new.component';
 import { ContactUpdateComponent } from './contact-update/contact-update.component';
 import { ProductUpdateComponent } from './product-update/product-update.component';
+import { DatePipe } from '@angular/common';
 
 
 
@@ -53,8 +54,11 @@ import { ProductUpdateComponent } from './product-update/product-update.componen
     
     
     
+    
   ],
-  providers: [],
+  providers: [
+    DatePipe,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -5,7 +5,8 @@ export class Product{
     stock: number;
     price: number;
     active: boolean;
-    date_added: Date;
-    category: Category
+    date_added: Date; //cambio de Date a String (prueba)
+    category: Category;
+    date_addedFormated: string; //añade
 
 }

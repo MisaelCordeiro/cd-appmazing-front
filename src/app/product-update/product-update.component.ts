@@ -4,6 +4,7 @@ import { Category } from '../model/Category';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductsService } from '../products.service';
 import { CategoriesService } from '../categories.service';
+import { DatePipe } from '@angular/common';
 
 
 
@@ -19,7 +20,7 @@ export class ProductUpdateComponent implements OnInit {
 
   categories: any = [];
 
-  constructor(private router: Router, private productsService: ProductsService, private categoriesService: CategoriesService, private route: ActivatedRoute) { }
+  constructor(private router: Router, private productsService: ProductsService, private categoriesService: CategoriesService, private route: ActivatedRoute, private datePipe: DatePipe) { }
 
 
   ngOnInit() {
@@ -47,10 +48,14 @@ export class ProductUpdateComponent implements OnInit {
       }
 
       if (this.product.date_added){
-        
+        this.product.date_addedFormated = this.formatDate(this.product.date_added);
         
       }
     });
+  }
+
+  formatDate(date: Date): string {
+    return this.datePipe.transform(date, 'yyyy-MM-dd') || '';
   }
 
 
@@ -58,6 +63,9 @@ export class ProductUpdateComponent implements OnInit {
   
 
   updateProduct(){
+    if (this.product.date_addedFormated){
+      this.product.date_added = new Date(this.product.date_addedFormated);
+    }
     this.productsService.updateProduct(this.product);
     this.navigateDetail();
   }
