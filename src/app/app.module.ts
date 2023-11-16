@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactHomeComponent } from './contact-home/contact-home.component';
-import { MatButtonModule, MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule, MatRadioModule, MatSelectModule, MatTableModule, MatToolbarModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatDialogModule, MatFormFieldModule, MatIconModule, MatInputModule, MatRadioModule, MatSelectModule, MatTableModule, MatToolbarModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactDetailComponent } from './contact-detail/contact-detail.component';
 import { ProductHomeComponent } from './product-home/product-home.component';
@@ -18,6 +18,8 @@ import { CategoryNewComponent } from './category-new/category-new.component';
 import { ContactUpdateComponent } from './contact-update/contact-update.component';
 import { ProductUpdateComponent } from './product-update/product-update.component';
 import { DatePipe } from '@angular/common';
+import { ContactDeleteComponent } from './contact-delete/contact-delete.component';
+import { ProductDeleteComponent } from './product-delete/product-delete.component';
 
 
 
@@ -34,8 +36,11 @@ import { DatePipe } from '@angular/common';
     CategoryNewComponent,
     ContactUpdateComponent,
     ProductUpdateComponent,
+    ContactDeleteComponent,
+    ProductDeleteComponent,
     
   ],
+  entryComponents: [ContactDeleteComponent, ProductDeleteComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -51,6 +56,7 @@ import { DatePipe } from '@angular/common';
     MatSelectModule,
     MatFormFieldModule,
     MatRadioModule,
+    MatDialogModule
     
     
     
