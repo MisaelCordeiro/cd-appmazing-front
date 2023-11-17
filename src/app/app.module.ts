@@ -20,6 +20,8 @@ import { ProductUpdateComponent } from './product-update/product-update.componen
 import { DatePipe } from '@angular/common';
 import { ContactDeleteComponent } from './contact-delete/contact-delete.component';
 import { ProductDeleteComponent } from './product-delete/product-delete.component';
+import { ChartsComponent } from './charts/charts.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 
 
@@ -38,6 +40,7 @@ import { ProductDeleteComponent } from './product-delete/product-delete.componen
     ProductUpdateComponent,
     ContactDeleteComponent,
     ProductDeleteComponent,
+    ChartsComponent,
     
   ],
   entryComponents: [ContactDeleteComponent, ProductDeleteComponent],
@@ -56,7 +59,8 @@ import { ProductDeleteComponent } from './product-delete/product-delete.componen
     MatSelectModule,
     MatFormFieldModule,
     MatRadioModule,
-    MatDialogModule
+    MatDialogModule,
+    NgxChartsModule
     
     
     

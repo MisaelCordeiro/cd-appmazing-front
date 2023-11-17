@@ -10,9 +10,11 @@ import { CategoriesHomeComponent } from './categories-home/categories-home.compo
 import { CategoryNewComponent } from './category-new/category-new.component';
 import { ContactUpdateComponent } from './contact-update/contact-update.component';
 import { ProductUpdateComponent } from './product-update/product-update.component';
+import { ChartsComponent } from './charts/charts.component';
 
 
 const routes: Routes = [
+  {path: '', component: ChartsComponent},
   {path: 'contacts', component: ContactHomeComponent},
   {path: 'contact/new', component: ContactNewComponent},
   {path: 'contact/:id', component: ContactDetailComponent},
